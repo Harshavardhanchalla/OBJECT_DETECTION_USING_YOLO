@@ -54,17 +54,21 @@ This project demonstrates object detection using the YOLOv8n model in a Streamli
    - The processed video frames will be shown in real-time in the app.
 
 ## Code Explanation
-### Imports and Model Loading
-The project uses essential libraries such as Streamlit for the web application, OpenCV for image and video processing, NumPy for numerical operations, and Ultralytics YOLO for the object detection model.
+### Imports and Model Loading:
+```python
+import streamlit as st
+import cv2
+import numpy as np
+import tempfile
+import random
+from ultralytics import YOLO
+```
 
-### Generate Random Colours for Class List
-Random colors are generated for the class list to visually differentiate detected objects.
+### Generate Random Colours for Class List:
+Random colours are generated for each class to visually differentiate between detected objects.
 
-### Streamlit App
-The Streamlit app includes a sidebar for uploading video files and a main window for displaying the video with detected objects in real-time. The application processes each frame of the video, performs object detection using YOLOv8n, and draws bounding boxes and class labels on the video frames.
-
-### Real-Time Object Detection
-The application continuously captures video frames, performs predictions using the YOLOv8n model, and displays the results in real-time. Bounding boxes are drawn around detected objects, and class labels with confidence scores are displayed.
+### Streamlit App:
+The Streamlit app is created to upload video files, perform object detection, and display the results in real-time.
 
 ## Credits
 This project uses the following libraries:
